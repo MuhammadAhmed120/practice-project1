@@ -27,11 +27,30 @@ body {
 
 .shield{
     height: 425px;
-    position: relative;
+    position: absolute;
+    top: -25%;
+    margin-top: -80px;
+    margin-left: -40px;
 }
 
-/* .fly{
-    position: relative;
-    top: 100%;
-    height: 700px
-} */
+.smart{
+    height: 409px;
+    position: absolute; 
+    top: -9%;
+    margin-top: -28px;
+    margin-left: -18px;
+}
+
+.crouch{
+    height: 460px;
+    position: absolute; 
+    top: -25%;
+    margin-top: -80px;
+    margin-left: -110px;
+}
+
+.fly{
+    height: 650px;
+    position: absolute;
+    margin-top: -320px;
+}
