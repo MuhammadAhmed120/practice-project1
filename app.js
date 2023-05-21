@@ -28,16 +28,16 @@ function pressedKey(event) {
 
     if (keyPressed === "e") {
         setTimeout(function() {
-            ironChar.className = "iron"
+            ironChar.className = "iron";
             ironChar.src = ironOriginal;
             console.log(ironChar.src);
         }, 2500);
 
-        ironChar.className = "shield"
+        ironChar.className = "shield";
         ironChar.src = "gifs/ironman-shields.gif";
         console.log(ironChar.src);
     }
-    else if (keyPressed === "q") {
+    if (keyPressed === "q") {
         setTimeout(function() {
             ironChar.src = ironOriginal;
             console.log(ironChar.src);
@@ -46,28 +46,29 @@ function pressedKey(event) {
         ironChar.src = "gifs/ironman-smart.gif";
         console.log(ironChar.src);
     }
+
+    var parentWidth = ironDiv.parentElement.offsetWidth;
+
     if(keyPressed === "d") {
-        var currentLeft = parseFloat(ironDiv.style.left) || 0;
+        var currentLeft = parseFloat(getComputedStyle(ironDiv).left); // left value in pixels.
+        var percentLeft = Math.floor((currentLeft / parentWidth) * 100); // converting px into percentage
 
-        console.log(ironDiv.style.left);
+        percentLeft += 3;
+        ironDiv.style.left = `${percentLeft}%`;
 
-        currentLeft += 2;
-        ironDiv.style.left = `${currentLeft}%`;
-
-        if(ironDiv.style.left === "80%"){
+        if(ironDiv.style.left === "81%"){
             ironDiv.style.left = "78%";
         }
-
+        console.log(percentLeft)
     }
+
     if(keyPressed === "a") {
-        var currentRight = parseInt(ironDiv.style.left) || 0;
+        var currentRight = parseFloat(getComputedStyle(ironDiv).left); // left value in pixels
+        var percentRight = Math.floor((currentRight / parentWidth) * 100);
+        percentRight -= 3;
+        ironDiv.style.left = `${percentRight}%`;
 
-        console.log(ironDiv.style.left);
-
-        currentRight -= 2;
-        ironDiv.style.left = `${currentRight}%`;
-
-        if(ironDiv.style.left === "-2%"){
+        if(ironDiv.style.left === "-3%"){
             ironDiv.style.left = "0%"
         }
 
