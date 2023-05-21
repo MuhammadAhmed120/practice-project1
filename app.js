@@ -96,7 +96,7 @@ function pressedKey(event) {
         var percentRight = Math.floor((currentRight / parentWidth) * 100);
         percentRight += 3;
         spiderDiv.style.right = `${percentRight}%`;
-
+        
         if(spiderDiv.style.right === "75%"){
             spiderDiv.style.right = "72%";
         }
@@ -116,7 +116,44 @@ function pressedKey(event) {
 
 
     // COMBAT - SPIDERMAN
+    if(keyPressed === "1"){
+        setTimeout(function(){
+            spiderChar.className = "spider";
+            spiderChar.src = spiderOriginal;
+        }, 2250)
 
+        spiderChar.className = "sting";
+        spiderChar.src = "gifs/spiderman-sting.gif";
+    }
+    if(keyPressed === "2"){
+        setTimeout(function(){
+            spiderChar.className = "spider";
+            spiderChar.src = spiderOriginal;
+        }, 1000)
+
+        spiderChar.className = "webball";
+        spiderChar.src = "gifs/spiderman-webball.gif";
+    }
+
+    if(keyPressed === "3"){
+        setTimeout(function(){
+            spiderChar.className = "spider";
+            spiderChar.src = spiderOriginal;
+        }, 1000)
+
+        spiderChar.className = "lowblock";
+        spiderChar.src = "gifs/spiderman-lowblock.gif";
+    }
+
+    if(keyPressed === "ArrowDown"){
+        setTimeout(function(){
+            spiderChar.className = "spider";
+            spiderChar.src = spiderOriginal;
+        }, 2300)
+
+        spiderChar.className = "usegem";
+        spiderChar.src = "gifs/spiderman-usegem.gif";
+    }
 }
 
 document.addEventListener("keyup", pressedKey);
