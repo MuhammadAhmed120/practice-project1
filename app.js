@@ -8,7 +8,11 @@ var spiderOriginal = spiderChar.src;
 
 
 
-
+function changeBg(){
+    var body = document.body.style;
+    body.backgroundImage = 'url("gifs/street-bg.gif")';
+    console.log(body)
+}
 
 
 
@@ -50,7 +54,7 @@ function pressedKey(event) {
             ironChar.src = ironOriginal;
         }, 1500);
 
-        ironChar.className = "smart"
+        ironChar.className = "iron smart"
         ironChar.src = "gifs/ironman-smart.gif";
     }
 
@@ -60,7 +64,7 @@ function pressedKey(event) {
             ironChar.src = ironOriginal;
         }, 2500);
 
-        ironChar.className = "shield";
+        ironChar.className = "iron shield";
         ironChar.src = "gifs/ironman-shields.gif";
     }
 
@@ -70,7 +74,7 @@ function pressedKey(event) {
             ironChar.src = ironOriginal;
         }, 5000);
 
-        ironChar.className = "crouch";
+        ironChar.className = "iron crouch";
         ironChar.src = "gifs/ironman-crouch.gif";
     }
 
@@ -80,7 +84,7 @@ function pressedKey(event) {
             ironChar.src = ironOriginal;
         }, 3000);
         
-        ironChar.className = "fly"
+        ironChar.className = "iron fly"
         ironChar.src = "gifs/ironman-fly.gif";
     }
 
@@ -122,7 +126,7 @@ function pressedKey(event) {
             spiderChar.src = spiderOriginal;
         }, 2250)
 
-        spiderChar.className = "sting";
+        spiderChar.className = "iron sting";
         spiderChar.src = "gifs/spiderman-sting.gif";
     }
     if(keyPressed === "2"){
@@ -131,7 +135,7 @@ function pressedKey(event) {
             spiderChar.src = spiderOriginal;
         }, 1000)
 
-        spiderChar.className = "webball";
+        spiderChar.className = "iron webball";
         spiderChar.src = "gifs/spiderman-webball.gif";
     }
 
@@ -141,7 +145,7 @@ function pressedKey(event) {
             spiderChar.src = spiderOriginal;
         }, 1000)
 
-        spiderChar.className = "lowblock";
+        spiderChar.className = "iron lowblock";
         spiderChar.src = "gifs/spiderman-lowblock.gif";
     }
 
@@ -151,9 +155,11 @@ function pressedKey(event) {
             spiderChar.src = spiderOriginal;
         }, 2300)
 
-        spiderChar.className = "usegem";
+        spiderChar.className = "iron usegem";
         spiderChar.src = "gifs/spiderman-usegem.gif";
     }
 }
+
+
 
 document.addEventListener("keyup", pressedKey);

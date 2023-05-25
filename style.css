@@ -1,9 +1,10 @@
 body {
     background: black;
-    background-image: url("gifs/wood-bg.gif");
+    background-image: url("gifs/fire-bg.gif");
+    /* background-image: url("gifs/street-bg.gif"); */
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -9%;
+    background-position-y: 3%;
 }
 
 .iron-con{
@@ -93,4 +94,84 @@ body {
     height: 600px;
     margin-top: -250px;
     margin-left: -80px;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:1024px) {
+    .iron-con{
+        top: 33%;
+    }
+
+    .spider-con{
+        top: 37%;
+    }
+
+    .iron{
+        height: 250px;
+    }
+
+    .spider{
+        height: 200px;
+    }
+
+    /* SPIDERMAN COMBAT */
+    .sting{
+        height: 410px;
+        position: absolute;
+        margin-top: -250px;
+        margin-left: -100px;
+    }
+
+    .webball{
+        position: absolute;
+        height: 270px;
+        margin-top: -55px;
+        margin-left: -50px;
+    }
+
+    .lowblock{
+        position: absolute;
+        height: 190px;
+        margin-top: 30px;
+    }
+
+    .usegem{
+        position: absolute;
+        height: 400px;
+        margin-top: -170px;
+        margin-left: -80px;
+    }
+
+    /* IRONMAN - COMBAT */
+    .shield{
+        height: 300px;
+        position: absolute;
+        margin-top: -50px;
+        margin-left: -80px;
+    }
+
+    .smart{
+        height: 290px;
+        position: absolute; 
+        margin-top: -20px;
+        margin-left: -14px;
+    }
+
+    .crouch{
+        height: 330px;
+        position: absolute; 
+        margin-top: -65px;
+        margin-left: -80px;
+    }
+
+    .fly{
+        height: 480px;
+        position: absolute;
+        margin-top: -245px;
+    }
 }
